@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<title></title>
+
+		<link rel="stylesheet" href="app/components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="app/components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.min.css">
+
+		<style>
+			.answer {
+				width:100%;
+			}
+			.question {
+				border-bottom: 1px solid #eee;
+			}
+		</style>
+
+
+	</head>
+	<body style="background:#eee">
+		<br>
+		<div class="col col-lg-8 col-lg-offset-2" style="background:#FFF">
+
+			<div class="row">
+				<div class="col col-lg-12">
+					<h1><img src="app/img/logo.jpeg" alt=""></h1>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-lg-12">
+					<h2>Customer Survey</h2>
+					<p>
+						This survey will be used to measure the success of our recent project. Quality, timeliness and customer satisfaction will be assessed to ensure CWS standards have been met. </p>
+					<p>
+						Your input is greatly valued, and we appreciate your time as we continually work to improve the CWS experience.
+						<hr>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-lg-12">
+					<h3>Instructions</h3>
+					<p>Enter a rating (to the decimal) from 0-4.0 for each of the following categories.Your weighted average will be used to determine, in part, the success of the project.</p>
+					<p>
+						Please consider the following evaluation scale: <br>
+						1.0 - Deemed unacceptable <br>
+						2.0 - Remedial action required <br>
+						3.0 - Quality generally in accordance with standards, still room for improvement <br>
+						4.0 - Meets or exceeds installation and quality standards <br>
+						<hr>
+					</p>
+				</div>
+			</div>
+			<div class="row question">
+				<div class="col col-lg-7">
+					<h4 class="text-primary">Considerations for Schedule: <small>20%</small></h4>
+					<ul>
+						<li>Where the dates on the NTP call met?</li>
+						<li>Were schedule changes communicated to CWS?</li>
+						<li>Was daily tracker submitted consistently?</li>
+						<li>Were there any delays attributable to CWS?</li>
+					</ul>
+
+
+				</div>
+				<div class="col col-lg-5">
+					<br>
+					<h1 id="answer-1-value" class="text-center" >3.5</h1>
+					<p class="text-center">
+						<input id="answer-1" type="text" class="answer form-control"  >
+					</p>
+				</div>
+			</div>
+
+			<div class="row question">
+				<div class="col col-lg-7">
+					<h4 class="text-primary">Considerations for Installation/Construction: <small>40%</small></h4>
+					<ul>
+						<li>Cables supported properly?</li>
+						<li>Cable management and labeling correct?</li>
+						<li>Fireproofing correct?</li>
+						<li>All connectors and jumpers tight?</li>
+						<li>RU and component mounting done properly?</li>
+					</ul>
+
+
+				</div>
+				<div class="col col-lg-5">
+					<br>
+					<h1 id="answer-2-value" class="text-center" >3.5</h1>
+					<p class="text-center">
+						<input id="answer-2" type="text" class="answer form-control"  >
+					</p>
+				</div>
+			</div>
+
+			<div class="row question">
+				<div class="col col-lg-7">
+					<h4 class="text-primary">Considerations for Testing/RF Engineering: <small>20%</small></h4>
+					<ul>
+						<li>Was the site accepted before RF testing began?</li>
+						<li> Failing data submitted?</li>
+						<li>Summary sheets provided?</li>
+						<li>Were there formatting issues with the closeouts?</li>
+						<li>Did CWS representative have a clear understanding of the testing and test equipment?</li>
+						<li>Did CWS representative demonstrate that they have a clear understanding of the testing and equipment?</li>
+					</ul>
+
+
+				</div>
+				<div class="col col-lg-5">
+					<br>
+					<h1 id="answer-3-value" class="text-center" >3.5</h1>
+					<p class="text-center">
+						<input id="answer-3" type="text" class="answer form-control"  >
+					</p>
+				</div>
+			</div>
+
+			<div class="row question">
+				<div class="col col-lg-7">
+					<h4 class="text-primary">Considerations for Construction Management: <small>20%</small></h4>
+					<ul>
+						<li>Were all costs captured up front or were many change orders required?</li>
+						<li>Did CM represent CWS in a professional manner in front of the venue owner and carrier?</li>
+						<li>Did CM demonstrate a high level of responsiveness to status inquiries and other requests from customer?</li>
+						<li>Was material received, inventoried and staged properly?</li>
+					</ul>
+
+
+				</div>
+				<div class="col col-lg-5">
+					<br>
+					<h1 id="answer-4-value" class="text-center" >3.5</h1>
+					<p class="text-center">
+						<input id="answer-4" type="text" class="answer form-control"  >
+					</p>
+				</div>
+			</div>
+			<div class="question">
+				<div class="col col-lg-12">
+					<h4 class="text-primary">Additional Feedback</h4>
+					<textarea name="" id="" cols="100" rows="10"></textarea>
+				</div>
+			</div>
+			<div class="question">
+				<div class="col col-lg-7 text-center">
+				<br>
+				<br>
+					<button class="btn btn-lg btn-block btn-primary">Submit Survey</button>
+				</div>
+				<div class="col col-lg-5">
+					<br>
+					<h1  class="text-center" >Total <span id="answers-total">3.5</span></h1>
+					<br>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col col-lg-12">
+				&nbsp;
+			</div>
+		</div>
+
+		<script src="app/components/jquery/dist/jquery.js"></script>
+		<script src="app/components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="app/components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+		<script src="app/js/app.js"></script>
+	</body>
+</html>

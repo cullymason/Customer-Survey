@@ -1,0 +1,17 @@
+{
+  "name": "customer_survey",
+  "version": "0.0.0",
+  "authors": [
+    "cullymason <cullymason@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ]
+}
