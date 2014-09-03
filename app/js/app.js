@@ -1,5 +1,19 @@
-var updateTotal = function() {
 
+
+var numberOfQuestions = 4,
+	defaultValue =3.5;
+
+
+var sliderOptions = {
+	precision: 2,
+	value: defaultValue,
+	step: 0.1,
+	min: 0,
+	max: 4.0,
+};
+
+
+var updateTotal = function() {
 	var answer1 = parseFloat($("h1#answer-1-value").text());
 	var answer2 = parseFloat($("h1#answer-2-value").text());
 	var answer3 = parseFloat($("h1#answer-3-value").text());
@@ -9,36 +23,21 @@ var updateTotal = function() {
 	$("span#answers-total").text(total.toFixed(1));
 };
 
+var updateAnswerValue = function(evt, ui) {
+	var questionNumber = evt.data.q;
+	var sliderValue = ui.value;
+	$('#answer-'+questionNumber+'-value').text(sliderValue);
+    updateTotal();
+}
 
-var sliderOptions = {
-	precision: 2,
-	value: 3.5,
-	step: 0.1,
-	min: 0,
-	max: 4.0,
-	tooltip: "hide"
-};
 
-$("input#answer-1").slider(sliderOptions).on('slide', function(slideEvt) {
-	var text = slideEvt.value.toFixed(1);
-	$("h1#answer-1-value").text(text);
-	updateTotal();
-});
 
-$("input#answer-2").slider(sliderOptions).on('slide', function(slideEvt) {
-	var text = slideEvt.value.toFixed(1);
-	$("h1#answer-2-value").text(text);
-	updateTotal();
-});
 
-$("input#answer-3").slider(sliderOptions).on('slide', function(slideEvt) {
-	var text = slideEvt.value.toFixed(1);
-	$("h1#answer-3-value").text(text);
-	updateTotal();
-});
+$(function() {
+    for (window.question = numberOfQuestions ; window.question > 0; window.question--) {
 
-$("input#answer-4").slider(sliderOptions).on('slide', function(slideEvt) {
-	var text = slideEvt.value.toFixed(1);
-	$("h1#answer-4-value").text(text);
-	updateTotal();
+    	var slider = $('#answer-'+window.question).slider(sliderOptions);
+
+    	$('#answer-'+window.question).on('slide',{q: window.question},updateAnswerValue);
+    };
 });
