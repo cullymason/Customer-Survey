@@ -21,12 +21,16 @@ var updateTotal = function() {
 
 	var total = (answer1*.2 + answer2*.4 + answer3*.2 + answer4*.2);
 	$("span#answers-total").text(total.toFixed(1));
+	$("#hidden-answer-total").val(total.toFixed(1));
+
 };
 
 var updateAnswerValue = function(evt, ui) {
 	var questionNumber = evt.data.q;
 	var sliderValue = ui.value;
 	$('#answer-'+questionNumber+'-value').text(sliderValue);
+	$('#hidden-answer-'+questionNumber+'-value').val(sliderValue);
+
     updateTotal();
 }
 
